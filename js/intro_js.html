@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manyoha Plumbing Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f9ff;
+            color: #1f3b5b;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0b3d91;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: #eaf5ff;
+            border: 1px solid #cfe3ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #0b3d91;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 18px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background: #0a2f6d;
+        }
+
+        #greeting {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .popup {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #0b3d91;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none;
+        }
+
+        .popup.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Manyoha Plumbing Services</h1>
+
+        <div class="card">
+            <p id="greeting">Welcome to Manyoha Plumbing Services.</p>
+            <button id="changeMessageBtn" type="button">Change Message</button>
+            <button id="clickMeBtn" class="click-me-btn" type="button">Click Me</button>
+        </div>
+
+        <div class="card">
+            <p id="dateText">Loading date...</p>
+            <button id="showTimeBtn" type="button">Show Current Time</button>
+        </div>
+
+        <div class="card">
+            <h2>Popular Services</h2>
+            <ul id="serviceList"></ul>
+        </div>
+    </div>
+
+    <div id="welcomePopup" class="popup" role="alert">
+        Welcome to Manyoha Plumbing Services.
+    </div>
+
+    <script>
+        const messages = [
+            "Welcome to Manyoha Plumbing Services.",
+            "Reliable plumbing solutions you can trust.",
+            "Fast, professional service for every home and business.",
+            "Your comfort and safety are our priority."
+        ];
+
+        const greeting = document.getElementById("greeting");
+        const changeMessageBtn = document.getElementById("changeMessageBtn");
+        const clickMeBtn = document.getElementById("clickMeBtn");
+        const welcomePopup = document.getElementById("welcomePopup");
+        let messageIndex = 0;
+
+        function showWelcomePopup() {
+            welcomePopup.classList.add("show");
+            clearTimeout(window.popupTimer);
+            window.popupTimer = setTimeout(function () {
+                welcomePopup.classList.remove("show");
+            }, 10000);
+        }
+
+        changeMessageBtn.addEventListener("click", function () {
+            messageIndex = (messageIndex + 1) % messages.length;
+            greeting.textContent = messages[messageIndex];
+        });
+
+        clickMeBtn.addEventListener("click", function () {
+            greeting.textContent = "You clicked me!";
+            showWelcomePopup();
+        });
+
+        const dateText = document.getElementById("dateText");
+        const showTimeBtn = document.getElementById("showTimeBtn");
+
+        function updateDate() {
+            const now = new Date();
+            dateText.textContent = "Today is " + now.toLocaleDateString() + " at " + now.toLocaleTimeString();
+        }
+
+        showTimeBtn.addEventListener("click", updateDate);
+        updateDate();
+
+        const services = [
+            "Leak repairs",
+            "Geyser installation and repair",
+            "Blocked drains",
+            "Emergency plumbing",
+            "General maintenance"
+        ];
+
+        const serviceList = document.getElementById("serviceList");
+
+        services.forEach(function (service) {
+            const listItem = document.createElement("li");
+            listItem.textContent = service;
+            serviceList.appendChild(listItem);
+        });
+
+        showWelcomePopup();
+    </script>
+</body>
+</html>

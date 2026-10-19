@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manyoha Plumbing Services</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cta-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .click-me-btn {
+            display: none;
+            background: #0b3d91;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 18px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .click-me-btn.show {
+            display: inline-block;
+        }
+
+        .popup {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #0b3d91;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 9999;
+        }
+
+        .popup.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.webp" alt="Manyoha Plumbing Services Logo" width="150" height="150">
+        <h1>Manyoha Plumbing Services</h1>
+        <p>Reliable plumbing solutions you can trust</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Professional Plumbing Services</h2>
+            <img src="images/Professional Plumbing Services.png" alt="Professional Plumbing Services">
+            <p>Manyoha Plumbing Services is a small plumbing business providing reliable plumbing solutions for residential and small business customers. Our services are designed to help customers maintain safe, functional and efficient plumbing systems.</p>
+
+            <p>Welcome to Manyoha Plumbing Services. We provide reliable plumbing solutions for residential and small business customers. Our services are designed to help customers maintain safe, functional and efficient plumbing systems.</p>
+            <p>From plumbing repairs and blocked drains to geyser services and general maintenance, our goal is to provide professional and dependable plumbing solutions.</p>
+
+            <div class="cta-row">
+                <p>
+                    <a href="enquiry.html">Request a Plumbing Enquiry</a>
+                </p>
+                <button id="clickMeBtn" class="click-me-btn" type="button">Click Me</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Our Services</h2>
+
+            <article>
+                <h3>Leak repairs</h3>
+                <p>Identification and repair of common plumbing leaks.</p>
+            </article>
+
+            <article>
+                <h3>Geyser Services</h3>
+                <p>Geyser installation, maintenance, and repair services.</p>
+            </article>
+
+            <article>
+                <h3>Blocked Drains</h3>
+                <p>Assistance with blocked drains and drainage problems.</p>
+            </article>
+
+            <article>
+                <h3>Emergency Plumbing</h3>
+                <p>24/7 emergency plumbing services for urgent situations.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Why Choose Manyoha Plumbing Services?</h2>
+            <ul>
+                <li>Reliable plumbing solutions</li>
+                <li>Professional approach</li>
+                <li>Customer-focused service</li>
+                <li>Convenient enquiry options</li>
+                <li>Residential and small business services</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Manyoha Plumbing Services. All rights reserved.</p>
+        <p><a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <div id="welcomePopup" class="popup" role="alert">
+        Welcome to Manyoha Plumbing Services.
+    </div>
+
+    <script>
+        const popup = document.getElementById("welcomePopup");
+        const clickMeBtn = document.getElementById("clickMeBtn");
+
+        function showPopupForTenSeconds() {
+            popup.classList.add("show");
+            clickMeBtn.classList.add("show");
+
+            clearTimeout(window.popupTimer);
+            window.popupTimer = setTimeout(function () {
+                popup.classList.remove("show");
+                clickMeBtn.classList.remove("show");
+            }, 10000);
+        }
+
+        clickMeBtn.addEventListener("click", showPopupForTenSeconds);
+
+        window.addEventListener("load", showPopupForTenSeconds);
+    </script>
+</body>
+</html>

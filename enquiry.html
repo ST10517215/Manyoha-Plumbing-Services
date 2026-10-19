@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manyoha Plumbing Services / Enquiry</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta name="description" content="Submit an enquiry to Manyoha Plumbing Services.">
+
+</head>
+<body>
+  
+    <!-- Website header -->
+    <header>
+
+        <h1>Manyoha Plumbing Services</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <section>
+
+            <h2>Plumbing Service Enquiry</h2>
+            <p>Complete the form below to enquire about a plumbing service.</p>
+
+        </section>
+
+        <!-- Enquiry Form -->
+        <section>
+            
+            <form action="#" method="post">
+
+                <fieldset>
+
+                    <legend>Customer Information</legend>
+
+                 <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </p>
+
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+
+                <p>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone">
+                </p>
+
+                </fieldset>
+                
+                <fieldset>
+
+                    <legend>Service Information</legend>
+
+                    <p>
+                       <label for="service">Service Required:</label>
+                       <select id="service" name="service">
+                           <option value="">Select a service</option>
+                           <option value="leak-repair">Leak Repair</option>
+                           <option value="geyser-service">Geyser Service</option>
+                           <option value="blocked-drain">Blocked Drain</option>
+                           <optioon value="burst-pipe">Burst Pipe Repairs</option>
+                           <option value="general-maintenance">General Maintenance</option>
+                           <option value="Emergency plumbing">Emergency Plumbing</option>
+                       </select>
+                    </p>
+
+                    <p> 
+                        <label for="preferred-date">Preferred Service Date:</label>
+                             <input type="date" id="preferred-date" name="preferred-date">
+                    </p>
+                    <p>
+                        <label for="message">Describe your plumbing problem:</label>
+                    </p>
+                    <p>
+                        <textarea id="message" name="message" rows="6" cols="40"></textarea>    
+                    </p>
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Preferred contact method</legend>
+
+                    <p>
+                        <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                        <label for="contact-phone">Phone</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="contact-whatsapp" name="contact-method" value="whatsapp">
+                        <label for="contact-whatsapp">WhatsApp</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="contact-email" name="contact-method" value="email">
+                        <label for="contact-email">Email</label>
+                    </p>
+
+                </fieldset>
+
+                <p>
+                    <input type="submit" value="Submit Enquiry">
+                    <input type="reset" value="Reset Form">
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+      <footer>
+
+        <p>&copy; 2026 Manyoha Plumbing Services. All rights reserved.</p>
+
+    </footer>
+
+</body>
+</html>

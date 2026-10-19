@@ -1,0 +1,71 @@
+body {
+    margin: 15px;
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+    color: steelblue;
+    font-size: 16px;
+}
+h1 {font-family: Georgia;
+    text-align: center;
+    font-size: 32px;
+    color: midnightblue;
+    text-decoration:none;
+    text-transform: none;
+    border: 2px solid steelblue;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: light skyblue;
+}
+ h2{font-family: Arial;
+     text-align: center;
+     font-size: 28px;
+    color: darkturquoise;
+    text-decoration:none;
+    text-transform: none;
+    border: 2px solid darkturquoise;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: lightblue;
+    }
+h3{font-family: Arial;
+    text-align: center;
+    font-size: 22px;
+    color:deepskyblue;
+    text-decoration:none;
+    text-transform: none;
+    border: 1px solid deepskyblue;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: lightskyblue;
+} 
+nav a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 10px;
+    color: midnightblue;
+}  nav a:hover{
+    font-size: 16px;
+    color: midnightblue;
+
+}
+.muted { color: var(--muted); }
+@media(min-width: 768px) {
+    .content{grid-template-columns: 1fr 2fr;}
+    .hero{display:flex; justify-content: center; align-items: center; gap: 20px;}
+}
+
+@media(max-width: 768px) {
+    .site-wrap{padding:11px}
+    h1.site-title{font-size: 2rem}
+    nav.site-nav{flex-wrap:wrap; justify-content:center}
+}
+
+/* utility */
+.text-center{text-align:center}
+
+/* small accessibility tweak for focus */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
