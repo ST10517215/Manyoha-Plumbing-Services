@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Manyoha Plumbing Services
 
 ## 1. Project Overview
@@ -90,3 +91,7 @@ Manyoha-Plumbing-Services/
 ## 8. Project Year
 
 2026
+=======
+# Manyoha-Plumbing-Services
+Website project for Manyoha Plumbing Services developed as part of a web development project.
+>>>>>>> 29fff364a0f3653c8d3c7100544a2b201931573a

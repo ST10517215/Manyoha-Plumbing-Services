@@ -1,0 +1,178 @@
+/* Manyoha Plumbing Services - Main Stylesheet */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f8fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #0b4f6c;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 17px;
+}
+
+/* Navigation */
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #01a7c2;
+}
+
+/* Main content */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+section {
+  background-color: white;
+  margin-bottom: 25px;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #0b4f6c;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #087f8c;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+ul {
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+/* Links and buttons */
+main a {
+  display: inline-block;
+  background-color: #01a7c2;
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+main a:hover {
+  background-color: #0b4f6c;
+}
+
+/* Forms */
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+button,
+input[type="submit"] {
+  background-color: #01a7c2;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #0b4f6c;
+}
+
+/* Footer */
+footer {
+  background-color: #0b4f6c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+footer a {
+  color: white;
+}
+
+/* Mobile devices */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 25px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    margin: 15px;
+    padding: 10px;
+  }
+}
