@@ -12,46 +12,6 @@
             margin: 0;
             padding: 0;
         }
-
-        .cta-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .click-me-btn {
-            display: none;
-            background: #0b3d91;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 18px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-
-        .click-me-btn.show {
-            display: inline-block;
-        }
-
-        .popup {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #0b3d91;
-            color: #fff;
-            padding: 15px 20px;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            display: none;
-            z-index: 9999;
-        }
-
-        .popup.show {
-            display: block;
-        }
     </style>
 </head>
 <body>
@@ -130,28 +90,14 @@
         <p><a href="contact.html">Contact Us</a></p>
     </footer>
 
-    <div id="welcomePopup" class="popup" role="alert">
-        Welcome to Manyoha Plumbing Services.
-    </div>
-
     <script>
-        const popup = document.getElementById("welcomePopup");
         const clickMeBtn = document.getElementById("clickMeBtn");
 
-        function showPopupForTenSeconds() {
-            popup.classList.add("show");
-            clickMeBtn.classList.add("show");
-
-            clearTimeout(window.popupTimer);
-            window.popupTimer = setTimeout(function () {
-                popup.classList.remove("show");
-                clickMeBtn.classList.remove("show");
-            }, 10000);
+        function handleClick() {
+            alert("Thank you for clicking the button!");
         }
 
-        clickMeBtn.addEventListener("click", showPopupForTenSeconds);
-
-        window.addEventListener("load", showPopupForTenSeconds);
+        clickMeBtn.addEventListener("click", handleClick);
     </script>
 </body>
 </html>
